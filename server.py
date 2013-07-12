@@ -24,11 +24,11 @@ class UploadHandler(tornado.web.RequestHandler):
 
     def post(self):
         try:
-            #util.log(self.get_argument("id", default="0"));
-            #file1 = self.request.files['files[]'][0];
-            #f = file1['body'];
-            #open("a.pdf", "w").write(f);
-            #os.system("pdf2txt.py -o a.txt a.pdf");
+            util.log(self.get_argument("id", default="0"));
+            file1 = self.request.files['files[]'][0];
+            f = file1['body'];
+            open("a.pdf", "w").write(f);
+            os.system("pdf2txt.py -o a.txt a.pdf");
 
             blocks = file_parser.parseToBlocks("a.txt");
             jo = json.dumps(map(lambda b : b.encode("utf-8"), blocks), ensure_ascii=False);
