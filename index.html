@@ -23,12 +23,13 @@
                     $interpolateProvider.endSymbol('}]}');
                     });
                 </script>
+        <link rel="stylesheet" href="css/my.css" />
             </head>
             <body ng-controller="BodyController">
                 <div class="container">
                     <!-- The fileinput-button span is used to style the file input field as button -->
                     <div>
-                        <h1>pdf转换器</h1>
+                        <h1 style="margin-bottom:20px;">pdf转换器</h1>
                         <span class="btn fileinput-button" id="upload-btn">
                             <i class="icon-plus"></i>
                             <span>选择pdf</span>
@@ -54,9 +55,7 @@
 
                     <div id="result" style="display:none">
                         <input type="text" ng-model="query" />
-                        <ul>
-                            <li ng-repeat="text in texts | filter:query">{[{text}]}</li>
-                        </ul>
+                        <input class="important" ng-repeat="text in texts | filter:query" value="{[{text}]}" onmouseover="this.focus()" onfocus="this.select()" autocomplete="off" readonly="" style="display:block;width:100%;"/>
                     </div>
                 </div>
                 <script src="js/my.js"></script>

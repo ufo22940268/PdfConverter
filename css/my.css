@@ -1,0 +1,10 @@
+.important {
+    background-color: #F5F5F5;
+    padding: 10px 0;
+    line-height: 25px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid #E2E2E2;
+    border-radius: 5px;
+    width: 580px;
+}
